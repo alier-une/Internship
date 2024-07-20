@@ -1,7 +1,8 @@
-## 1 Создать список из нескольких чисел и строк, затем разделить его на два списка: один для чисел, другой для строк.
+## 1 Создать список из нескольких чисел и строк, затем разделить
+# его на два списка: один для чисел, другой для строк.
 def divide_lists(my_list):
-    digits = [d for d in my_list if type(d) == int]
-    words = [w for w in my_list if type(w) == str]
+    digits = [d for d in my_list if isinstance(d, int)]
+    words = [w for w in my_list if isinstance(w, str)]
     return digits, words
 
 
@@ -9,7 +10,8 @@ my_list = [1, 2, 'hello', 56, 'python', 33, 'red']
 print(divide_lists(my_list))
 
 
-## 2 Написать программу, которая подсчитывает количество уникальных слов в тексте, введенном пользователем.
+## 2 Написать программу, которая подсчитывает количество уникальных слов в тексте,
+# введенном пользователем.
 ## Вывести статистику по количеству уникальных слов и общее количество слов.
 
 
@@ -35,13 +37,3 @@ def unic_words(user_input):
 # user_input = input('Введите ваш текст: ')
 # print(unic_words(user_input))
 
-## для интересующихся (необязательно): Создайте тип данных, который может хранить только числа больше нуля
-def positive(number):
-    if number < 0:
-        raise ValueError('Число должно быть больше нуля')
-    else:
-        return number
-
-
-n = positive(9)
-print(n)
